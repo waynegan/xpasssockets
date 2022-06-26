@@ -1,7 +1,7 @@
 FROM nginx:1.19.3-alpine
 ENV TZ=Asia/Shanghai
 RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php7
-RUN ls -a nginx/
+RUN ls
 COPY nginx/default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/static-html /usr/share/nginx/html/index
