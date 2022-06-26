@@ -4,7 +4,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates bash curl unzip php
 
 ADD default.conf.template /etc/nginx/conf.d/default.conf.template
 ADD nginx.conf /etc/nginx/nginx.conf
-
+ADD vless_ws_tls.json /
 
 ADD configure.sh /configure.sh
 
